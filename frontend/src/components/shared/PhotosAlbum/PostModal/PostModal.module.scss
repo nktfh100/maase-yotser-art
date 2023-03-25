@@ -1,0 +1,76 @@
+@import "@/styles/mixins";
+
+.post-modal {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    min-width: 60vw;
+    max-width: 95vw;
+    height: 90vh;
+    padding: 1rem 5rem;
+    transform: translate(-50%, 0);
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.post-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000000, 0.4);
+    z-index: 99;
+}
+
+.post-modal__close {
+    position: absolute;
+    right: 20px;
+
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:after,
+    &:before {
+        content: "";
+        height: 20px;
+        width: 20px;
+        border-top: 1px solid #000;
+        position: absolute;
+        top: 7px;
+        right: -8px;
+        transform: rotate(-45deg);
+    }
+
+    &:before {
+        right: 6px;
+        transform: rotate(45deg);
+    }
+
+    &:hover {
+        opacity: 0.3;
+    }
+}
+
+.post-modal__title {
+    text-align: center;
+    @include for-phone-only {
+        font-size: 1.6rem;
+    }
+}
+
+.post-modal__loader {
+    position: absolute;
+    margin-top: 8em;
+}
+
+.post-modal__img {
+    width: unset;
+    height: unset;
+    max-height: 80vh;
+    max-width: 90vw;
+}

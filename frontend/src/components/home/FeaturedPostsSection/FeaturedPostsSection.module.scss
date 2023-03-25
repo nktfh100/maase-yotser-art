@@ -1,0 +1,16 @@
+@import "@/styles/mixins";
+
+.featured {
+    margin-top: 6rem;
+}
+
+.featured__header {
+    margin-bottom: 2.5rem;
+}
+
+.featured__album {
+    width: 60vw;
+    @include for-phone-only {
+        width: 90vw;
+    }
+}

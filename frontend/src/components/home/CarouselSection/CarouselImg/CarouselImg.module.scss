@@ -1,0 +1,9 @@
+@import "@/styles/mixins";
+
+.img {
+    height: 32rem;
+    object-fit: cover;
+    @include for-phone-only {
+        height: 16rem;
+    }
+}

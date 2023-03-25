@@ -1,0 +1,11 @@
+// To use:
+// @import "@/styles/mixins";
+// @include for-phone-only {
+//
+// }
+
+@mixin for-phone-only {
+    @media (max-width: 900px) {
+        @content;
+    }
+}

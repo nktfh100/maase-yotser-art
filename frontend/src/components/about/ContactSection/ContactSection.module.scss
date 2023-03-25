@@ -1,0 +1,17 @@
+@import "@/styles/mixins";
+
+.contact {
+    margin-top: 3rem;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.social img {
+    border-radius: 50%;
+}

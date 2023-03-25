@@ -1,0 +1,75 @@
+@import "@/styles/mixins";
+
+.about {
+    width: min(95vw, 70rem);
+}
+
+.about__inner-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #ebeced;
+    color: #103948;
+    overflow: hidden;
+
+    @include for-phone-only {
+        flex-direction: column;
+        &:first-child {
+            flex-flow: column-reverse;
+        }
+    }
+}
+
+.about__img {
+    position: relative;
+    overflow: hidden;
+}
+
+.about__name-header {
+    color: #46626d;
+}
+.about__name {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.about__left,
+.about__right {
+    padding: 4rem 2rem;
+}
+
+.about__left {
+    flex-basis: 30%;
+    @include for-phone-only {
+        flex-basis: revert;
+    }
+}
+
+.about__left-bottom {
+    @include for-phone-only {
+        height: 25rem;
+    }
+}
+
+.about__right {
+    flex-basis: 70%;
+    @include for-phone-only {
+        flex-basis: revert;
+    }
+}
+
+.about__left-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.about__right-top {
+    height: 35rem;
+    @include for-phone-only {
+        height: 18rem;
+    }
+}
+
+.about__right-bottom {
+    white-space: pre-line;
+}

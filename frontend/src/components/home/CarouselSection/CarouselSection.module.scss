@@ -1,0 +1,9 @@
+@import "@/styles/mixins";
+
+.carousel {
+    width: 60vw;
+
+    @include for-phone-only {
+        width: 95vw;
+    }
+}

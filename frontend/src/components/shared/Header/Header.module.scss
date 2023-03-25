@@ -1,0 +1,14 @@
+@import "@/styles/mixins";
+
+.header {
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 400;
+    color: #103948;
+}
+
+@include for-phone-only {
+    .header {
+        font-size: 2rem;
+    }
+}

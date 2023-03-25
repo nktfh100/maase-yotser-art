@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+
+    transition: padding 0.3s;
+    * {
+        transition: 0.3s;
+    }
+
+    &.navbar--minimized {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        padding: 0.5rem 0;
+        .navbar__title {
+            font-size: 1.4rem;
+        }
+        .navbar__nav {
+            margin-top: 0rem;
+        }
+    }
+}
+
+.navbar__title {
+    color: rgb(155, 155, 155);
+    font-weight: 400;
+}
+
+.navbar__nav {
+    margin-top: 0.8rem;
+}
+
+.navbar__nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}

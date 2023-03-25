@@ -1,0 +1,13 @@
+.nav-item {
+    a {
+        border-bottom: 2px solid rgba(147, 145, 155, 0);
+        transition: 0.2s;
+        color: rgb(104, 104, 104);
+    }
+
+    a:hover,
+    &.nav-item--active a {
+        color: #103948;
+        border-bottom: 2px solid black;
+    }
+}
