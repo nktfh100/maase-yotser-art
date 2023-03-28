@@ -86,14 +86,15 @@ var lists = {
       }
     },
     ui: {
-      labelField: "title"
+      labelField: "title",
+      listView: {
+        initialColumns: ["id", "title", "imageFile", "collections"]
+      }
     },
-    // this is the fields for our Post list
     fields: {
       title: (0, import_fields.text)(),
       imageFile: (0, import_fields.image)({ storage: "remote_images" }),
       collections: (0, import_fields.relationship)({
-        // we could have used 'Collection', but then the relationship would only be 1-way
         ref: "Collection.posts",
         many: true,
         ui: {
@@ -132,7 +133,6 @@ var lists = {
           }
         }
       }),
-      // this can be helpful to find out all the Posts associated with a Collection
       posts: (0, import_fields.relationship)({
         ref: "Post.collections",
         many: true,

@@ -15,7 +15,7 @@ export default function PhotosAlbum({ posts, albumProps = {}, containerProps = {
                 layout="rows"
                 spacing={20}
                 targetRowHeight={500}
-                photos={posts.map((post) => {
+                photos={posts.filter((post) => post && post.imageFile).map((post) => {
                     return { src: post.imageFile.url, width: post.imageFile.width, height: post.imageFile.height, id: post.id }
                 })}
                 renderPhoto={NextJsImage}

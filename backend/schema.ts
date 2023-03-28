@@ -74,17 +74,18 @@ export const lists: Lists = {
     },
 
     ui: {
-      labelField: "title"
+      labelField: "title",
+      listView: {
+        initialColumns: ["id", "title", "imageFile", "collections"]
+      }
     },
 
-    // this is the fields for our Post list
     fields: {
       title: text(),
 
       imageFile: image({ storage: 'remote_images' }),
 
       collections: relationship({
-        // we could have used 'Collection', but then the relationship would only be 1-way
         ref: 'Collection.posts',
 
         many: true,
@@ -133,7 +134,6 @@ export const lists: Lists = {
         }
       }),
 
-      // this can be helpful to find out all the Posts associated with a Collection
       posts: relationship({
         ref: 'Post.collections',
         many: true,

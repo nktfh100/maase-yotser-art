@@ -23,7 +23,7 @@ export default function CollectionCard({ data }: { data: ApiCollection }) {
             <Link href={`/collections/${data.slug}`} className={styles['collection']}>
                 <div className={styles['collection-card']}>
                     {
-                        data.posts.map((post, i) => {
+                        data.posts.filter((post) => post && post.imageFile).map((post, i) => {
                             return (
                                 <Image
                                     key={i}
