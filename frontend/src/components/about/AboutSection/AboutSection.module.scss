@@ -52,6 +52,7 @@
 
 .about__right {
     flex-basis: 70%;
+    font-size: 1.3rem;
     @include for-phone-only {
         flex-basis: revert;
     }
